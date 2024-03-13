@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: autodeploy
+  name: autodeployRi05
   labels:
-    app: autodeploy
-  namespace: namespace-workflow-1692811819315
+    app: autodeployRi05
+  namespace: namespace-workflow-1710363297756
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: autodeploy
+      app: autodeployRi05
   template:
     metadata:
       labels:
-        app: autodeploy
+        app: autodeployRi05
     spec:
       containers:
-        - name: autodeploy
-          image: acrworkflow1692811819315.azurecr.io/image-workflow-1692811819315:latest
+        - name: autodeployRi05
+          image: acrworkflow1710363297756.azurecr.io/image-workflow-1710363297756:latest
           ports:
             - containerPort: 5000
